@@ -1,0 +1,62 @@
+@font-face {font-family:"Catfiles";src:url("fonts/Catfiles.ttf")format("truetype");}
+@font-face {font-family:"Candy Beans";src:url("fonts/Candy\ Beans.otf")format("opentype");}
+body 
+{font-family:"Catfiles",Arial,sans-serif;
+margin:0;
+height:100vh;
+background:linear-gradient(135deg,#7c3aed,#ec4899);
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:Arial;
+color:white;}
+#card 
+{background:rgba(0, 0, 0, 0.35);
+padding:30px;
+border-radius:24px;
+width:90%;
+max-width:420px;
+text-align:center;}
+#cat {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;}
+
+h1
+{font-family:"Catfiles",sans-serif; 
+ font-size:36px;margin-bottom:10px;}
+p
+{font-family:"Candy Beans",cursive;
+ font-size:18px;line-height:1.4;}
+button{margin-top:20px;
+       padding:12px 20px;
+       font-size:16px;
+       border:none;
+       border-radius:999px;
+       cursor:pointer;
+       background:#22c55e;
+       color:black;}
+button:hover{transform:scale(1.05);}
+@keyframes cardEnter{from{opacity:0;
+transform:translateY(40px);}
+  to{opacity:1;transform: translateY(0);}}
+#card {animation:cardEnter 0.5s ease-out;}
+@keyframes catPop {
+  0% 
+  {transform:scale(0.8);opacity:0;}
+  60% 
+  {transform: scale(1.05);}
+  100% 
+  {transform: scale(1);opacity:1;}}
+#cat{animation: catPop 0.5s ease-out;}
+button {transition:transform 0.15s ease, box-shadow 0.15s ease;}
+button:hover 
+{transform:scale(1.08) rotate(-1deg);
+ box-shadow:0 8px 20px rgba(0,0,0,0.3);}
+h1, p {
+  animation: fadeText 0.5s ease;
+}
+
+@keyframes fadeText {from {opacity:0;}
+                     to {opacity:1;}}
